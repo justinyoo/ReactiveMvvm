@@ -2,6 +2,7 @@
 
 namespace ReactiveMvvm.ViewModels
 {
+#pragma warning disable 1591
     public class ReactiveViewModel<TModel, TId> : ObservableObject, IDisposable
         where TModel : Model<TId>
         where TId : IEquatable<TId>
