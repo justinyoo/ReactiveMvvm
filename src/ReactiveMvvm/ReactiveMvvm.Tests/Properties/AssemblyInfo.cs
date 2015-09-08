@@ -3,7 +3,6 @@ using Xunit;
 
 [assembly: AssemblyTitle("ReactiveMvvm.Tests")]
 [assembly: AssemblyDescription("")]
-[assembly: AssemblyProduct("ReactiveMvvm.Tests")]
 
 // xUnit.net settings
 [assembly: CollectionBehavior(

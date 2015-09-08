@@ -4,6 +4,7 @@ using System.Runtime.InteropServices;
 
 [assembly: AssemblyCompany("envicase")]
 [assembly: AssemblyCopyright("Copyright (c) 2015, Gyuwon Yi, Jin-Wook Chung")]
+[assembly: AssemblyProduct("Reactive-Mvvm")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
