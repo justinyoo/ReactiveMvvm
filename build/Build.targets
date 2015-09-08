@@ -42,15 +42,9 @@
           VersioningNuspecs;
           GetReleaseNotes;
           SetReleaseNotes;
-          MakeTagOnGitHub" />
-
-  <!--<Target Name ="Publish" Condition=" '$(CanPush)' == 'true' " DependsOnTargets="
-          VersioningNuspecs;
-          GetReleaseNotes;
-          SetReleaseNotes;
           PackNugetPackages;
           PushNugetPackages;
-          MakeTagOnGitHub" />-->
+          MakeTagOnGitHub" />
   
   <Target Name="MakePrivateKey">
     <Base64StringToFile Input="$(PrivateKeyBase64String)" OutputFile="PrivateKey.snk" />

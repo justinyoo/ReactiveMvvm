@@ -10,4 +10,3 @@ function vsvers()
 }
 
 C:/Program\ Files\ \(x86\)/MSBuild/14.0/Bin/MSBuild.exe `dirname $0`/Build.Proj `vsvers` -v:minimal -maxcpucount -nodeReuse:false $@
-
