@@ -40,7 +40,7 @@
   </PropertyGroup>
   
   <ItemGroup>
-    <Projects Include="$(RootDir)src\**\ReactiveMvvm.csproj" />
+    <Projects Include="$(RootDir)**\ReactiveMvvm.csproj" />
     <TestProjects Include="$(RootDir)**\*.Tests.csproj" />
     <SolutionInfo Include="$(RootDir)**\SolutionInfo.cs" />
     <NuspecFiles Include="$(RootDir)**\*.nuspec" />
