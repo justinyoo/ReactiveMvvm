@@ -104,6 +104,9 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="..\SolutionInfo.cs">
+      <Link>Properties\SolutionInfo.cs</Link>
+    </Compile>
     <Compile Include="ClearStreamAfterTestAttribute.cs" />
     <Compile Include="DefaultCoalescerTest.cs" />
     <Compile Include="IFunctor.cs" />

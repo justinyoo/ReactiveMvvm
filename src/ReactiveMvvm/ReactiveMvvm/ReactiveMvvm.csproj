@@ -36,6 +36,9 @@
     <CodeAnalysisRuleSet>..\ReactiveMvvm.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="..\SolutionInfo.cs">
+      <Link>Properties\SolutionInfo.cs</Link>
+    </Compile>
     <Compile Include="Coalescer.cs" />
     <Compile Include="DefaultCoalescer.cs" />
     <Compile Include="GlobalSuppressions.cs" />
