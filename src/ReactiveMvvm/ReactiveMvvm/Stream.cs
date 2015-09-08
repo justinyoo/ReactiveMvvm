@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Reactive.Linq;
 using System.Reactive.Subjects;
 
@@ -141,15 +142,10 @@ namespace ReactiveMvvm
             _spout.Dispose();
         }
 
-        [System.Diagnostics.CodeAnalysis.SuppressMessage(
-            "Microsoft.Globalization",
-            "CA1305:SpecifyIFormatProvider",
-            MessageId = "System.String.Format(System.String,System.Object[])",
-            Justification = "No argument to be formatted.")]
         private InvalidOperationException InvalidCoalescingResultId =>
-            new InvalidOperationException(
-                $"The id of the coalescing result"
-                + $" is not equal to ({Id}).");
+            new InvalidOperationException(((FormattableString)
+                $"The id of the coalescing result is not equal to ({Id}).")
+                .ToString(CultureInfo.CurrentCulture));
 
         private TModel CoalesceWithLast(TModel model)
         {
@@ -203,12 +199,7 @@ namespace ReactiveMvvm
 
             _spout.OnNext(observable);
         }
-
-        [System.Diagnostics.CodeAnalysis.SuppressMessage(
-            "Microsoft.Globalization",
-            "CA1305:SpecifyIFormatProvider",
-            MessageId = "System.String.Format(System.String,System.Object[])",
-            Justification = "No argument to be formatted.")]
+        
         private void OnNext(TModel value)
         {
             if (value == null)
@@ -217,9 +208,9 @@ namespace ReactiveMvvm
             }
             if (value.Id.Equals(Id) == false)
             {
-                var message =
-                    $"{nameof(value)}.{nameof(value.Id)}({value.Id})"
-                    + $" is not equal to ({Id}).";
+                var message = ((FormattableString)
+                    $"{nameof(value)}.{nameof(value.Id)}({value.Id}) is not equal to ({Id}).")
+                    .ToString(CultureInfo.CurrentCulture);
 
                 throw new ArgumentException(message, nameof(value));
             }
